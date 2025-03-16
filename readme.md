@@ -1,4 +1,4 @@
-# backend pratice series 
+# backend practice series 
 
 this is a video of backend with javascript 
 
