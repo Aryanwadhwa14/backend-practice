@@ -27,7 +27,7 @@ const registerUser = asyncHandler (async(req,res)=>{
         throw new ApiError(400,"All fields are required")
     }
 
-    User.findOne({
+    const existedUser = await User.findOne({
         $or : [{username},{email},{}]
     })
 
@@ -37,7 +37,13 @@ const registerUser = asyncHandler (async(req,res)=>{
 
     const avatarLocalpath = req.files?.avatar[0]?.path;
     const coverImageLocalpath = req.files?.coverImage[0]?.path;
-
+    
+    let coverImageLocalPath ; //scope 
+    if(req.files && Array.isArray(req.files.coverImage) && req.files.coverImage.length > 0){
+       // coverImageLocalPath = req.files.coverImage[0]?.path;
+    }
+    
+    
     if(!avatarLocalpath){ // step 4 is done 
         throw new ApiError(400,"Avatar file is required ")
     }
@@ -72,7 +78,7 @@ const registerUser = asyncHandler (async(req,res)=>{
         new ApiResponse(200, createdUser , "user registered successfully")
     )
 
-    // all the steps are done !!! , testing is not done coz the db is not connecting due to some internal bugs
+    // all the steps are done !!! ,
 
 
 })
