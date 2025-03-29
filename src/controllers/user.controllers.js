@@ -3,7 +3,7 @@ import {ApiError} from "../utils/apiErrors.js";
 import {User} from "../models/user.models.js"
 import { uploadOnCloudinary } from "../utils/cloudinary.js";
 import {ApiResponse} from "../utils/apiResponse.js"
-import {jwt} from "jsonwebtoken";
+import pkg from "jsonwebtoken";
 import e from "express";
 
 
@@ -475,4 +475,4 @@ const getWatchHistory = asyncHandler(async(req,res)=>{
 
 
 
-export { registerUser, loginUser,logoutUser, refreshAccessToken, refreshAccessToken, changeCurrentPassword,getCurrentUser,upDateAccountDetails, updateUserAvatar, updateUserCoverImage , getUserChannelProfile , getWatchHistory}
+export { registerUser, loginUser,logoutUser, refreshAccessToken, changeCurrentPassword,getCurrentUser,upDateAccountDetails, updateUserAvatar, updateUserCoverImage , getUserChannelProfile , getWatchHistory}
