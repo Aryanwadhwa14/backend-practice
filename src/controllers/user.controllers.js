@@ -2,7 +2,7 @@ import { asyncHandler } from "../utils/asyncHandler.js";
 import {ApiError} from "../utils/apiErrors.js";
 import {User} from "../models/user.models.js"
 import { uploadOnCloudinary } from "../utils/cloudinary.js";
-import {ApiResponse} from "../utils/apiResponse.js"
+import {ApiResponse} from "../utils/apiResponse.js";
 import pkg from "jsonwebtoken";
 import e from "express";
 
