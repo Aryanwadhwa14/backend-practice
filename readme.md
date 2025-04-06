@@ -20,11 +20,22 @@ This project is a Video Management System built using Node.js, Express, and Mong
 - Busboy (for handling multipart form data)
 
 ## Project Structure
-
-
-. ├── src │ ├── controllers │ │ └── video.controllers.js │ ├── middleware │ │ └── auth.js │ ├── models │ │ └── video.model.js │ ├── routes │ │ └── user.routes.js │ └── app.js ├── .env ├── package.json └── README.md
-
-
+```
+.
+├── src
+│   ├── controllers
+│   │   └── video.controllers.js
+│   ├── middleware
+│   │   └── auth.js
+│   ├── models
+│   │   └── video.model.js
+│   ├── routes
+│   │   └── user.routes.js
+│   └── app.js
+├── .env
+├── package.json
+└── README.md
+```
 ## Installation
 1. Clone the repository:
     ```bash
@@ -39,8 +50,8 @@ This project is a Video Management System built using Node.js, Express, and Mong
 
 3. Create a `.env` file in the root directory and add your MongoDB URI and JWT secret:
     ```
-    MONGODB_URI=mongodb+srv://username:password@cluster0.mongodb.net/database
-    JWT_SECRET=your_jwt_secret
+    MONGODB_URI= _______.
+    JWT_SECRET= ________.
     ```
 
 4. Start the development server:
